@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".MainActivity"
+     android:orientation="vertical"
+    android:gravity="top">
+
+    <EditText
+
+        android:id="@+id/edit_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName|textCapWords" />
+
+    <DatePicker
+        android:id="@+id/select_fecha"
+        android:layout_width="301dp"
+        android:layout_height="352dp"
+        android:layout_gravity="center"
+        android:calendarViewShown="true"
+        android:clickable="true" />
+
+    <EditText
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/edit_telefono"
+        android:hint="@string/telefono"
+        android:inputType="phone"
+        />
+
+    <EditText
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/edit_email"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        />
+
+
+    <EditText
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/edit_descripcion"
+        android:hint="@string/descripcion"
+        android:inputType="textLongMessage"
+
+        />
+
+    <Button
+        android:id="@+id/botonSigueinte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/siguiente"
+        android:layout_gravity="bottom"
+        />
+
+</LinearLayout>
+
+
