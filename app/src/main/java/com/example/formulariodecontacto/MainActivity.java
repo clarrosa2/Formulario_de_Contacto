@@ -10,6 +10,7 @@ import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import java.sql.Date;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         botonSigueinte=findViewById(R.id.botonSigueinte);
 
+
         botonSigueinte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,15 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 String edit_telefono= telefono.getText().toString().trim();
                 String edit_email= email.getText().toString().trim();
                 String edit_descripcion = descripcion.getText().toString().trim();
-                String select_fecha = String.valueOf(fecha.getCalendarView());
-
 
                 Intent intent= new Intent(MainActivity.this, ConfirmacionDeDatos.class);
                 intent.putExtra("Nombre", edit_nombre);
                 intent.putExtra("Telefono", edit_telefono);
                 intent.putExtra("Email", edit_email);
                 intent.putExtra("Descripcion", edit_descripcion);
-                intent.putExtra("Fecha",select_fecha);
 
                 startActivity(intent);
             }

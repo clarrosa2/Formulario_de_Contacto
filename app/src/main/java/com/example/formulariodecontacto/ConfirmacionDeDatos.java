@@ -10,11 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 public class ConfirmacionDeDatos extends AppCompatActivity {
 
-    TextView confirmarNombre, confirmarTelefono, confirmarEmail, confirmarDescripcion, confirmarFecha;
+    TextView confirmarNombre, confirmarTelefono, confirmarEmail, confirmarDescripcion;
 
     Button botonEditar;
 
@@ -27,10 +28,9 @@ public class ConfirmacionDeDatos extends AppCompatActivity {
         confirmarTelefono=findViewById(R.id.telefonoConfirmar);
         confirmarEmail=findViewById(R.id.emailConfirmar);
         confirmarDescripcion=findViewById(R.id.descripcionConfirmar);
-        confirmarFecha=findViewById(R.id.fechaConfirmar);
 
 
-        String edit_nombre, edit_telefono, edit_email, edit_descripcion, select_fecha;
+        String edit_nombre, edit_telefono, edit_email, edit_descripcion;
 
         Intent intent = getIntent();
 
@@ -38,7 +38,6 @@ public class ConfirmacionDeDatos extends AppCompatActivity {
         edit_telefono = intent.getStringExtra("Telefono");
         edit_email = intent.getStringExtra("Email");
         edit_descripcion = intent.getStringExtra("Descripcion");
-        select_fecha = intent.getStringExtra("Fecha");
 
 
 
@@ -46,7 +45,6 @@ public class ConfirmacionDeDatos extends AppCompatActivity {
         confirmarTelefono.setText(edit_telefono);
         confirmarEmail.setText(edit_email);
         confirmarDescripcion.setText(edit_descripcion);
-        confirmarFecha.setText(select_fecha);
 
 
 
